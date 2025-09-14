@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import 'tailwindcss';
 
 @plugin 'tailwindcss-animate';
@@ -14,6 +15,22 @@
     --radius-lg: var(--radius);
     --radius-md: calc(var(--radius) - 2px);
     --radius-sm: calc(var(--radius) - 4px);
+
+    --color-sakarsaBlue: #b8f2ff;
+    --color-fontcolors: #1b697d;
+    --color-primary1: #b9f2ff;
+    --color-primary2: #6ddaed;
+    --color-primary3: #a6cdd8;
+    --color-primary4: #1b697d;
+    --color-primary5: #124b56;
+    --color-biru: #16cdd8;
+    --color-coklat: #a83f27;
+    --color-primary6: #248da8;
+    --color-primary7: #16cdd8;
+    --color-primary8: #0c6c72;
+
+    --font-poppins: 'Poppins', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
 
     --color-background: var(--background);
     --color-foreground: var(--foreground);
