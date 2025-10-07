@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Sakarsian;
+
 return [
 
     /*
@@ -40,6 +42,10 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'sakarsian' => [
+            'driver' => 'session',
+            'provider' => 'sakarsian'
+        ]
     ],
 
     /*
@@ -65,10 +71,10 @@ return [
             'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'sakarsian' => [
+            'driver' => 'eloquent',
+            'model' => Sakarsian::class,
+        ],
     ],
 
     /*

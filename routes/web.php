@@ -1,24 +1,31 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardRaport;
+use App\Http\Controllers\Auth\GoogleController;
 
 Route::get('/', function () {
-    return Inertia::render('rapor');
-})->name('home');
+    return view('index');
+})->name('login');
 
-Route::get('/raport', function () {
-    return Inertia::render('rapor');
-})->name('rapor');
-Route::get('/raport/1', function () {
-    return Inertia::render('detailrapor');
-})->name('rapor');
+Route::get('/auth/google', [GoogleController::class, 'redirectToGoogle'])->name('login.google');
+Route::get('/auth/google-callback', [GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('dashboard', function () {
-        return Inertia::render('dashboard');
-    })->name('dashboard');
+Route::middleware(['auth:sakarsian'])->group(function () {
+    Route::get('/dashboard', [DashboardRaport::class, 'dashboard'])->name('rapor');
+
+    Route::get('/raport/{id}', [DashboardRaport::class, 'raport'])->name('raport');
+
+    Route::post('/logout', function () {
+        Auth::logout();
+
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+
+        return redirect('/');
+    })->name('logout');
 });
-
-require __DIR__.'/settings.php';
-require __DIR__.'/auth.php';
+require __DIR__ . '/settings.php';
+// require __DIR__ . '/auth.php';
