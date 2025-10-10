@@ -176,7 +176,7 @@ class Sakarsian extends Seeder
             ['nama' => 'Juan Andrew', 'nim' => 'F2401241008', 'email' => 'juanandrew@apps.ipb.ac.id', 'kode' => 'F10'],
             ['nama' => 'Ayesha Nashwa Raida Sulthoni', 'nim' => 'F2401241127', 'email' => 'ayeshanashwa@apps.ipb.ac.id', 'kode' => 'F16'],
             ['nama' => 'Muhammad Azkiya Arrayyan', 'nim' => 'F3401241040', 'email' => 'azkiyaarrayyan@apps.ipb.ac.id', 'kode' => 'F4'],
-            ['nama' => 'Muhammad Rahmat Dafa', 'nim' => 'F3401241044', 'email' => 'nan', 'kode' => 'F13'],
+            ['nama' => 'Muhammad Rahmat Dafa', 'nim' => 'F3401241044', 'email' => 'muhrahmatdafa@apps.ipb.ac.id', 'kode' => 'F13'],
             ['nama' => 'Attala Ortzi', 'nim' => 'H3401241115', 'email' => 'attalaortzi@apps.ipb.ac.id', 'kode' => 'F9'],
             ['nama' => 'Tanaya Fathiatul Makiah Hartono', 'nim' => 'I3401241153', 'email' => 'tanayafathmakiah@apps.ipb.ac.id', 'kode' => 'F8'],
             ['nama' => 'Farhan Dzaky Siregar', 'nim' => 'K1401241230', 'email' => 'dzakysiregar@apps.ipb.ac.id', 'kode' => 'F14'],

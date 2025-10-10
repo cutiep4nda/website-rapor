@@ -7,7 +7,7 @@ use App\Http\Controllers\DashboardRaport;
 use App\Http\Controllers\Auth\GoogleController;
 
 Route::get('/', function () {
-    return view('index');
+    return Inertia::render('login');
 })->name('login');
 
 Route::get('/auth/google', [GoogleController::class, 'redirectToGoogle'])->name('login.google');
