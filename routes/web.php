@@ -18,6 +18,8 @@ Route::middleware(['auth:sakarsian'])->group(function () {
 
     Route::get('/raport/{id}', [DashboardRaport::class, 'raport'])->name('raport');
 
+    Route::get('/kinerja', [DashboardRaport::class, 'kinerja'])->name('kinerja');
+
     Route::post('/logout', function () {
         Auth::logout();
 

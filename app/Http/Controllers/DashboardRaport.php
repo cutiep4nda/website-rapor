@@ -48,4 +48,12 @@ class DashboardRaport extends Controller
             'id' => $id,
         ]);
     }
+
+    public function kinerja()
+    {
+        return Inertia::render('grafik', [
+            'file' => Auth::user()->kode . '.pdf',
+            'nama' => Auth::user()->nama,
+        ]);
+    }
 }
